@@ -17,6 +17,7 @@ def handle_update():
     update = request.json
     if 'message' in update:
         send_channel_message(update['message'])
+    return '{"status": "ok"}'
 
 
 def send_channel_message(message: str):
